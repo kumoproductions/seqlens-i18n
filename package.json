@@ -1,0 +1,46 @@
+{
+  "name": "@seqlens/i18n",
+  "version": "26.13.0-beta.0",
+  "private": false,
+  "license": "MIT",
+  "description": "Internationalization engine and message catalogs for seqlens",
+  "homepage": "https://github.com/kumoproductions/seqlens-i18n",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kumoproductions/seqlens-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kumoproductions/seqlens-i18n/issues"
+  },
+  "keywords": [
+    "seqlens",
+    "i18n",
+    "translations",
+    "react"
+  ],
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./react": "./src/react.ts",
+    "./routing": "./src/routing.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "check-coverage": "node --experimental-strip-types scripts/check-coverage.ts"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "react": "^19.2.4",
+    "typescript": "^5.9.3"
+  }
+}

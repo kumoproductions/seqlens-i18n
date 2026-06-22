@@ -1,0 +1,32 @@
+name: New locale request
+description: Propose adding a new language to seqlens.
+title: "[new-locale] "
+labels: ["new-locale"]
+body:
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: Language name (in English) and BCP 47 code.
+      placeholder: 'French (fr), Brazilian Portuguese (pt-BR), ...'
+    validations:
+      required: true
+
+  - type: dropdown
+    id: commitment
+    attributes:
+      label: Are you planning to contribute the initial translation?
+      options:
+        - 'Yes — I will open a PR with src/locales/<locale>.ts'
+        - 'Maybe — I can help review, not lead'
+        - 'No — I am just requesting'
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything we should know?
+      description: Regional variants, formality conventions, plural rules quirks, anything that would affect the translation.
+    validations:
+      required: false

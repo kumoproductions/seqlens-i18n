@@ -1,0 +1,49 @@
+name: Translation fix
+description: Report an incorrect, awkward, or outdated translation in an existing locale.
+title: "[translation] "
+labels: ["translation"]
+body:
+  - type: dropdown
+    id: locale
+    attributes:
+      label: Locale
+      description: Which locale needs the fix?
+      options:
+        - en (English)
+        - ja (Japanese)
+        - other (please specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: key
+    attributes:
+      label: Message key
+      description: 'Dot-path of the affected key, e.g. `app.settings.general.themeLabel`.'
+      placeholder: app.common.loading
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current translation
+      description: Paste the current string.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested
+    attributes:
+      label: Suggested translation
+      description: What should it say instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Why this change?
+      description: Briefly explain the issue (wrong meaning, awkward phrasing, outdated, etc.). Screenshots of the UI are very welcome.
+    validations:
+      required: false
